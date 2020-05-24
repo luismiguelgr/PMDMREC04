@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pmdmrec04.RegistroActivity">
+
+    <TextView
+        android:id="@+id/labelRegistroTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="@string/labelRegistroTitulo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/labelRegistroNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="104dp"
+        android:text="@string/labelRegistroNombre"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/textRegistroNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="@string/textRegistroNombre"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/labelRegistroNombre"
+        app:layout_constraintTop_toBottomOf="@+id/labelRegistroTitulo" />
+
+    <TextView
+        android:id="@+id/labelRegistroApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/labelRegistroApellidos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRegistroNombre" />
+
+    <EditText
+        android:id="@+id/textRegistroApellidos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/textRegistroApellidos"
+        app:layout_constraintStart_toEndOf="@+id/labelRegistroApellidos"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistroNombre" />
+
+    <TextView
+        android:id="@+id/labelRegistroEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="56dp"
+        android:text="@string/labelRegistroEmail"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRegistroApellidos" />
+
+    <EditText
+        android:id="@+id/textRegistroEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="@string/textRegistroEmail"
+        app:layout_constraintStart_toEndOf="@+id/labelRegistroEmail"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistroApellidos" />
+
+    <TextView
+        android:id="@+id/labelRegistroUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="60dp"
+        android:text="@string/labelRegistroUsuario"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRegistroEmail" />
+
+    <EditText
+        android:id="@+id/textRegistroUsuario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:hint="@string/textRegistroUsuario"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toEndOf="@+id/labelRegistroUsuario"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistroEmail" />
+
+    <TextView
+        android:id="@+id/labelRegistroContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/labelRegistroContrasena"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/labelRegistroUsuario" />
+
+    <EditText
+        android:id="@+id/textRegistroContrasena"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="@string/textRegistroContrasena"
+        app:layout_constraintStart_toEndOf="@+id/labelRegistroContrasena"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistroUsuario" />
+
+    <Button
+        android:id="@+id/botonRegistrarse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:text="@string/botonRegistrarse"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textRegistroContrasena" />
+</androidx.constraintlayout.widget.ConstraintLayout>

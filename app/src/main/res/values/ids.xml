@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="botonRegistrarse" type="id" />
+    <item name="labelRegistroNombre" type="id" />
+    <item name="labelRegistroTitulo" type="id" />
+    <item name="labelRegistroApellidos" type="id" />
+    <item name="textRegistroNombre" type="id" />
+    <item name="labelRegistroEmail" type="id" />
+    <item name="textRegistroApellidos" type="id" />
+    <item name="labelRegistroUsuario" type="id" />
+    <item name="textRegistroEmail" type="id" />
+    <item name="labelRegistroContrasena" type="id" />
+    <item name="textRegistroUsuario" type="id" />
+    <item name="textRegistroContrasena" type="id" />
+</resources>

@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">PMDMREC04</string>
+    <string name="labelInicio">Autentificación de usuario</string>
+    <string name="buttonInvitado">como invitado</string>
+    <string name="buttonAdmin">como administrador</string>
+    <string name="buttonRegistro">Registrarse</string>
+    <string name="labelCampoUsuario">Usuario:</string>
+    <string name="labelCampoContrasena">Contraseña:</string>
+    <string name="textCampoUsuario">nombre del usuario</string>
+    <string name="textCampoContrasena">contraseña del usuario</string>
+    <string name="labelRegistroTitulo">Registro de usuario</string>
+    <string name="labelRegistroNombre">Nombre:</string>
+    <string name="textRegistroNombre">nombre</string>
+    <string name="labelRegistroApellidos">Apellidos:</string>
+    <string name="textRegistroApellidos">apellidos</string>
+    <string name="labelRegistroEmail">Email:</string>
+    <string name="textRegistroEmail">email</string>
+    <string name="labelRegistroUsuario">Usuario:</string>
+    <string name="textRegistroUsuario">usuario</string>
+    <string name="labelRegistroContrasena">Contraseña:</string>
+    <string name="textRegistroContrasena">contraseña</string>
+    <string name="botonRegistrarse">Registrarse</string>
+    <string name="imageButtonListaProvincias">Ver mas</string>
+    <string name="buttonAdminEngadirFase">Añadir fase</string>
+    <string name="buttonAdminSeleccionarFase">Seleccionar fase para una provincia</string>
+</resources>

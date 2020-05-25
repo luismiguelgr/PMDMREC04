@@ -46,27 +46,11 @@ public class MainActivity extends AppCompatActivity {
         btnAdmin.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                String usuarioBd ="";
-                String passBd = "";
-                String tUsuario = textUsuario.getText().toString().trim();
-                String tContrasena = textContrasena.getText().toString().trim();
-
-                Cursor c =db.rawQuery("SELECT usuario, contrasena FROM usuarios WHERE usuario='"+tUsuario+"'", null);
-
-                if(c.moveToFirst()){
-                    usuarioBd = c.getString(0);
-                    passBd = c.getString(1);
-
-                    if(tContrasena.equals(passBd)){
-                        Intent intent = new Intent(v.getContext(), AdministradorActivity.class);
-                        startActivity(intent);
-                        textUsuario.setText("");
-                        textContrasena.setText("");
-                    }else{
-                        Toast.makeText(getApplicationContext(),"Contraseña incorrecta", Toast.LENGTH_SHORT).show();
-                    }
-                }else{
-                    Toast.makeText(getApplicationContext(),"Usuario incorrecto", Toast.LENGTH_SHORT).show();
+                if(existeUsuario()){
+                    Intent intent = new Intent(v.getContext(), AdministradorActivity.class);
+                    startActivity(intent);
+                    textUsuario.setText("");
+                    textContrasena.setText("");
                 }
             }
         });
@@ -74,12 +58,41 @@ public class MainActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), RegistroActivity.class);
-                startActivity(intent);
+                if(existeUsuario()){
+                    Intent intent = new Intent(v.getContext(), RegistroActivity.class);
+                    startActivity(intent);
+                    textUsuario.setText("");
+                    textContrasena.setText("");
+                }
 
             }
         });
 
+    }
+
+    private boolean existeUsuario(){
+        boolean existe = false;
+        String usuarioBd ="";
+        String passBd = "";
+        String tUsuario = textUsuario.getText().toString().trim();
+        String tContrasena = textContrasena.getText().toString().trim();
+
+        Cursor c =db.rawQuery("SELECT usuario, contrasena FROM usuarios WHERE usuario='"+tUsuario+"'", null);
+
+        if(c.moveToFirst()){
+            usuarioBd = c.getString(0);
+            passBd = c.getString(1);
+
+            if(tContrasena.equals(passBd)){
+                existe = true;
+
+            }else{
+                Toast.makeText(getApplicationContext(),"Contraseña incorrecta", Toast.LENGTH_SHORT).show();
+            }
+        }else{
+            Toast.makeText(getApplicationContext(),"Usuario incorrecto", Toast.LENGTH_SHORT).show();
+        }
+        return existe;
     }
 
     @Override

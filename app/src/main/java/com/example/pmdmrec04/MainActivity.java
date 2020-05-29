@@ -58,13 +58,10 @@ public class MainActivity extends AppCompatActivity {
         btnRegistro.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                if(existeUsuario()){
                     Intent intent = new Intent(v.getContext(), RegistroActivity.class);
                     startActivity(intent);
                     textUsuario.setText("");
                     textContrasena.setText("");
-                }
-
             }
         });
 
